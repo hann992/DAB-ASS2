@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using DAB_ASS2.Models;
+
 
 namespace DAB_ASS2
 {
@@ -16,7 +18,7 @@ namespace DAB_ASS2
 
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Society> Societies { get; set; }
-        public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Room> Rooms { get; set; }
 
 
     }
