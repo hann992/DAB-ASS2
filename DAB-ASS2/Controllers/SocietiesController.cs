@@ -10,6 +10,8 @@ namespace DAB_ASS2.Controllers
         public string Get()
         {
             // Samle info og sende retur...
+            // Get all societies (cvr, addresses and chairmen) by their activity
+
 
 
             return "Retur";

@@ -10,6 +10,10 @@ namespace DAB_ASS2.Controllers
         public string Get()
         {
             // Samle info og sende retur...
+            // Get a list of booked rooms (name, location), with the booking 
+            // society(name, chairmen) and the times it is booked.
+
+
 
 
             return "Retur";
