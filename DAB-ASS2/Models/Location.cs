@@ -11,6 +11,5 @@ namespace DAB_ASS2.Models
         public string location_name { get; set; }
 
         public ICollection<LocationProperty> locationProperties { get; set; }
-
     }
 }
