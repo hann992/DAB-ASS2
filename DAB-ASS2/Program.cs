@@ -19,10 +19,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-using (MyDbContext db = new MyDbContext())
-{
-    SeedData.SeedDatabase(db);
-}
 
 app.UseAuthorization();
 

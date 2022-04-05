@@ -72,8 +72,8 @@ namespace DAB_ASS2
             Booking booking1 = new Booking()
             {
                 //BookingID = 1,
-                booking_from = new DateTime(11, 12, 13, 22, 30, 0),
-                booking_to = new DateTime(11, 12, 14, 10, 30, 0),
+                booking_from = new DateTime(2022, 12, 13, 22, 30, 0),
+                booking_to = new DateTime(2022, 12, 14, 10, 30, 0),
                 society_Id = 1,
                 room_Id = 1,
             };
@@ -81,8 +81,8 @@ namespace DAB_ASS2
             Booking booking2 = new Booking()
             {
                 //BookingID = 2,
-                booking_from = new DateTime(11, 03, 13, 10, 00, 0),
-                booking_to = new DateTime(11, 03, 22, 10, 30, 0),
+                booking_from = new DateTime(2022, 03, 13, 10, 00, 0),
+                booking_to = new DateTime(2022, 03, 22, 10, 30, 0),
                 society_Id = 2,
                 room_Id = 2,
             };
@@ -90,8 +90,8 @@ namespace DAB_ASS2
             Booking booking3 = new Booking()
             {
                 //BookingID = 3,
-                booking_from = new DateTime(21, 1, 13, 12, 00, 0),
-                booking_to = new DateTime(21, 8, 14, 23, 59, 0),
+                booking_from = new DateTime(2022, 1, 13, 12, 00, 0),
+                booking_to = new DateTime(2022, 8, 14, 23, 59, 0),
                 society_Id = 3,
                 room_Id = 3,
             };
