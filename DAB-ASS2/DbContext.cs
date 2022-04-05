@@ -19,6 +19,8 @@ namespace DAB_ASS2
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Society> Societies { get; set; }
         public DbSet<Room> Rooms { get; set; }
+        public DbSet<Chairman> Chairmen { get; set; }
+        public DbSet<Location> Locations { get; set; }
 
 
     }
