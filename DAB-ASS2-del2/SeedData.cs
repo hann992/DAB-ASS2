@@ -102,7 +102,7 @@ namespace DAB_ASS2
                 room_name = "Leasy HQ",
                 room_capacity = 888,
                 location_ID = 1,
-                
+
             };
 
             Room room2 = new Room()
@@ -186,39 +186,85 @@ namespace DAB_ASS2
             db.Add(locationProperty2);
             db.Add(locationProperty3);
 
-        LocationAccess locationAccess11 = new LocationAccess()
-        {
-            locationcode = 1234,
-            locationId = 1
+            LocationAccess locationAccess11 = new LocationAccess()
+            {
+                locationcode = 1234,
+                locationId = 1
+            };
 
-        };
+            LocationAccess locationAccess12 = new LocationAccess()
+            {
+                location_key_pickup_address = "Kommunalkontoret",
+                locationId = 1
+            };
 
-        LocationAccess locationAccess12 = new LocationAccess()
-        {
+            LocationAccess locationAccess21 = new LocationAccess()
+            {
+                locationcode = 6969,
+                locationId = 2
+            };
+
+            LocationAccess locationAccess22 = new LocationAccess()
+            {
+                location_key_pickup_address = "Kommunalkontoret",
+                locationId = 2
+            };
 
 
+            LocationAccess locationAccess31 = new LocationAccess()
+            {
+                locationcode = 4321,
+                locationId = 3
+            };
 
-        };
+            LocationAccess locationAccess32 = new LocationAccess()
+            {
+                location_key_pickup_address = "Kommunalkontoret",
+                locationId = 3
+            };
 
+            db.Add(locationAccess11);
+            db.Add(locationAccess12);
+            db.Add(locationAccess21);
+            db.Add(locationAccess22);
+            db.Add(locationAccess31);
+            db.Add(locationAccess32);
 
+            KeyResponsible keyResponsible1 = new KeyResponsible()
+            {
+                key_responsible_name = "Peter Fraleasy",
+                key_responsible_CPR = 8888888888,
+                key_responsible_address = "Leasyvej etellerandet",
+                key_responsible_phone = 88888888,
+                key_responsible_photo_ID_number = 88888888
+            };
 
+            KeyResponsible keyResponsible2 = new KeyResponsible()
+            {
+                key_responsible_name = "John Mokai",
+                key_responsible_CPR = 12345677,
+                key_responsible_address = "Storegade 1, 8900 Randers C",
+                key_responsible_phone = 69696969,
+                key_responsible_photo_ID_number = 69696969
+            };
 
+            KeyResponsible keyResponsible3 = new KeyResponsible()
+            {
+                key_responsible_name = "Templateperson Templateson",
+                key_responsible_CPR = 1111111111,
+                key_responsible_address = "Templatevej Templatenr, Teplatezip Templateby",
+                key_responsible_phone = 11111111,
+                key_responsible_photo_ID_number = 11111111
+            };
 
+            db.Add(keyResponsible1);
+            db.Add(keyResponsible2);
+            db.Add(keyResponsible3);
 
-
-
-        Console.WriteLine("Database Seeded");
+            Console.WriteLine("Database Seeded");
 
             db.SaveChanges();
 
         }
-
-
         
-
-
-
-
-
-    }
 }
