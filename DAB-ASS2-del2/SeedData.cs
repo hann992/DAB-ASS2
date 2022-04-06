@@ -42,6 +42,7 @@ namespace DAB_ASS2
                 society_activity = "Leasying stuff",
                 society_member_count = 69,
                 chairmanid = 1,
+                KeyResponsible_Id = 1
             };
 
             Society society2 = new Society()
@@ -51,6 +52,7 @@ namespace DAB_ASS2
                 society_activity = "Appreciating the city of Randers",
                 society_member_count = 420,
                 chairmanid = 2,
+                KeyResponsible_Id = 2
             };
 
             Society society3 = new Society()
@@ -60,6 +62,7 @@ namespace DAB_ASS2
                 society_activity = "Counting backwards",
                 society_member_count = 1337,
                 chairmanid = 3,
+                KeyResponsible_Id = 3
             };
 
             db.Add(society1);
@@ -69,7 +72,7 @@ namespace DAB_ASS2
             Booking booking1 = new Booking()
             {
                 booking_from = new DateTime(2022, 12, 13, 22, 30, 0),
-                booking_to = new DateTime(2022, 12, 14, 10, 30, 0),
+                booking_to = new DateTime(2023, 12, 14, 10, 30, 0),
                 society_Id = 1,
                 room_Id = 1,
             };
@@ -77,15 +80,15 @@ namespace DAB_ASS2
             Booking booking2 = new Booking()
             {
                 booking_from = new DateTime(2022, 03, 13, 10, 00, 0),
-                booking_to = new DateTime(2022, 03, 22, 10, 30, 0),
+                booking_to = new DateTime(2023, 03, 22, 10, 30, 0),
                 society_Id = 2,
                 room_Id = 2,
             };
 
             Booking booking3 = new Booking()
             {
-                booking_from = new DateTime(2022, 1, 13, 12, 00, 0),
-                booking_to = new DateTime(2022, 8, 14, 23, 59, 0),
+                booking_from = new DateTime(2024, 1, 13, 12, 00, 0),
+                booking_to = new DateTime(2025, 8, 14, 23, 59, 0),
                 society_Id = 3,
                 room_Id = 3,
             };
@@ -99,7 +102,7 @@ namespace DAB_ASS2
                 room_name = "Leasy HQ",
                 room_capacity = 888,
                 location_ID = 1,
-
+                
             };
 
             Room room2 = new Room()
@@ -176,7 +179,6 @@ namespace DAB_ASS2
 
             LocationProperty locationProperty3 = new LocationProperty()
             {
-
                 location_property_name = "Backwards numbers for some reason",
             };
 
@@ -184,12 +186,39 @@ namespace DAB_ASS2
             db.Add(locationProperty2);
             db.Add(locationProperty3);
 
-            Console.WriteLine("Database Seeded");
+        LocationAccess locationAccess11 = new LocationAccess()
+        {
+            locationcode = 1234,
+            locationId = 1
+
+        };
+
+        LocationAccess locationAccess12 = new LocationAccess()
+        {
+
+
+
+        };
+
+
+
+
+
+
+
+
+        Console.WriteLine("Database Seeded");
 
             db.SaveChanges();
+
         }
 
+
         
+
+
+
+
 
     }
 }
