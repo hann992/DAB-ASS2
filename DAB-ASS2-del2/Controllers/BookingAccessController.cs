@@ -8,8 +8,13 @@ namespace DAB_ASS2.Controllers
     [Route("BookingAccess/")]
     public class BookingAccessController : ControllerBase
     {
-        [HttpGet]
-        public string Get()
+        /// <summary>
+        /// Fetch a list of all future bookings with acces info.
+        /// </summary>
+        /// <param name="keyResponsible">Key Responsible ID</param>
+        /// <returns></returns>
+        [HttpGet("{keyResponsible}")]
+        public string Get(long keyResponsible)
         {
             /*
             Given a key-responsible the municipalities would like to offer a 
@@ -18,8 +23,6 @@ namespace DAB_ASS2.Controllers
             */
 
             var db = new MyDbContext();
-
-            int keyResponsible = 5;
 
             var query = (from b in db.Bookings
 

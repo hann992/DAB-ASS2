@@ -8,6 +8,9 @@ namespace DAB_ASS2.Controllers
     [Route("Bookings/")]
     public class BookingsController : ControllerBase
     {
+        /// <summary>
+        /// Fetch all bookings.
+        /// </summary>
         [HttpGet]
         public string Get()
         {

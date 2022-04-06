@@ -7,6 +7,9 @@ namespace DAB_ASS2.Controllers
     [Route("MunicipalityInfo/")]
     public class MunicipalityInfoController : ControllerBase
     {
+        /// <summary>
+        /// Fetch all Municipality Rooms and their Locations.
+        /// </summary>
         [HttpGet]
         public string Get()
         {

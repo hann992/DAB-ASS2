@@ -7,6 +7,9 @@ namespace DAB_ASS2.Controllers
     [Route("Societies/")]
     public class SocietiesController : ControllerBase
     {
+        /// <summary>
+        /// Fetch all Societies.
+        /// </summary>
         [HttpGet]
         public string Get()
         {
