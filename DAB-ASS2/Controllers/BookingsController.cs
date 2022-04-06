@@ -22,7 +22,7 @@ namespace DAB_ASS2.Controllers
 
             var db = new MyDbContext();
 
-            SeedData.SeedDatabase(db);
+            //SeedData.SeedDatabase(db);
 
 
             var query = (from b in db.Bookings
