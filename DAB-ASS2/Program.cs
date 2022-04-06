@@ -24,4 +24,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// Seeding database
+var db = new MyDbContext();
+SeedData.SeedDatabase(db);
+
 app.Run();
+
+

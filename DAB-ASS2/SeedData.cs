@@ -7,6 +7,9 @@ namespace DAB_ASS2
     {
         public static void SeedDatabase(DbContext db)
         {
+
+            Console.WriteLine("Seeding database!");
+
             Chairman chairman1 = new Chairman()
             {
                 //chairmanid = 1,

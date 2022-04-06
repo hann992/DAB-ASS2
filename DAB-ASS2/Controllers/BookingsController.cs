@@ -11,18 +11,12 @@ namespace DAB_ASS2.Controllers
         [HttpGet]
         public string Get()
         {
-            
-
-
-
 
             // Samle info og sende retur...
             // Get a list of booked rooms (name, location), with the booking 
             // society(name, chairmen) and the times it is booked.
 
             var db = new MyDbContext();
-
-            //SeedData.SeedDatabase(db);
 
 
             var query = (from b in db.Bookings

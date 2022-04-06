@@ -14,6 +14,7 @@ namespace DAB_ASS2.Controllers
             // Get all societies (cvr, addresses and chairmen) by their activity
             var db = new MyDbContext();
 
+            // Vi laver en liste over resultaterne, og joiner Society og Chairman
             var query = (from s in db.Societies
                          join c in db.Chairmen
                          on s.chairmanid equals c.chairmanid
