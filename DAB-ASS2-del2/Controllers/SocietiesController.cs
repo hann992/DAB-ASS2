@@ -7,17 +7,24 @@ namespace DAB_ASS2.Controllers
     [Route("Societies/")]
     public class SocietiesController : ControllerBase
     {
+        /// <summary>
+        /// Fetch all Societies.
+        /// </summary>
         [HttpGet]
         public string Get()
         {
             // Samle info og sende retur...
             // Get all societies (cvr, addresses and chairmen) by their activity
+
+            // Adgang til DB
             var db = new MyDbContext();
 
             // Vi laver en liste over resultaterne, og joiner Society og Chairman
             var query = (from s in db.Societies
+
                          join c in db.Chairmen
                          on s.chairmanid equals c.chairmanid
+
                          orderby s.society_activity
                          select new
                          {
@@ -28,6 +35,7 @@ namespace DAB_ASS2.Controllers
                              SocietyActivity = s.society_activity
                          }).ToList();
 
+            // Vi laver listen om til json, og returnere som string
             return JsonConvert.SerializeObject(query);
         }
     }

@@ -1,3 +1,6 @@
+using DAB_ASS2;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,8 +19,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseAuthorization();
 
 app.MapControllers();
 
+// Seeding database
+var db = new MyDbContext();
+SeedData.SeedDatabase(db);
+
 app.Run();
+
+
