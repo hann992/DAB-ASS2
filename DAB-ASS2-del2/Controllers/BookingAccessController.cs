@@ -13,7 +13,7 @@ namespace DAB_ASS2.Controllers
         /// </summary>
         /// <param name="keyResponsible">Key Responsible ID</param>
         /// <returns></returns>
-        [HttpGet("{keyResponsible}")]
+        [HttpGet("{keyResponsible}")]   // Vi tager en long int ind som key
         public string Get(long keyResponsible)
         {
             /*
@@ -22,8 +22,11 @@ namespace DAB_ASS2.Controllers
             bookings, with access information.
             */
 
+            // Adgang til DB
             var db = new MyDbContext();
 
+            // Vi opretter en ny query, og tager Bookings, og joiner: Societies, keyResponsibles, Rooms, Locations, LocationAccesses.
+            // Vi har også constraints: keyResponsible skal være den søgte key, OG vi vil kun se bookings, som slutter i fremtiden
             var query = (from b in db.Bookings
 
                          join s in db.Societies
@@ -56,6 +59,7 @@ namespace DAB_ASS2.Controllers
 
                          }).ToList();
 
+            // Vi laver listen om til json, og returnere som string
             return JsonConvert.SerializeObject(query);
 
         }

@@ -19,9 +19,10 @@ namespace DAB_ASS2.Controllers
             // Get a list of booked rooms (name, location), with the booking 
             // society(name, chairmen) and the times it is booked.
 
+            // Adgang til DB
             var db = new MyDbContext();
 
-
+            // Vi opretter en ny query, og tager bookings, og joiner: Societies, Chairmen, Rooms og Locations
             var query = (from b in db.Bookings
 
                         join s in db.Societies
@@ -36,7 +37,8 @@ namespace DAB_ASS2.Controllers
                         join l in db.Locations
                         on r.location_ID equals l.location_ID
 
-                        select new
+                         // Vi laver den nye sammensluttede tabel
+                         select new
                         {
                             RoomName = r.room_name,
                             LocationName = l.location_name,
@@ -46,6 +48,7 @@ namespace DAB_ASS2.Controllers
                             EndTime = b.booking_to
                         }).ToList();
 
+            // Vi laver listen om til json, og returnere som string
             return JsonConvert.SerializeObject(query);
             
         }

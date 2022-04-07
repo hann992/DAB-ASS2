@@ -27,8 +27,6 @@ namespace DAB_ASS2
                     chairman_address = "Leasyvej 8, 8888 Leasytown"
                 };
 
-
-
                 Chairman chairman2 = new Chairman()
                 {
                     chairman_name = "Brian Mokaisken",
@@ -267,6 +265,7 @@ namespace DAB_ASS2
                 db.Add(keyResponsible2);
                 db.Add(keyResponsible3);
 
+                // Tilføjelserne gemmes.
                 db.SaveChanges();
 
                 Console.WriteLine("Database Seeded");

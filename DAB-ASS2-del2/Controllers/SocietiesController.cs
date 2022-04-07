@@ -15,6 +15,8 @@ namespace DAB_ASS2.Controllers
         {
             // Samle info og sende retur...
             // Get all societies (cvr, addresses and chairmen) by their activity
+
+            // Adgang til DB
             var db = new MyDbContext();
 
             // Vi laver en liste over resultaterne, og joiner Society og Chairman
@@ -33,6 +35,7 @@ namespace DAB_ASS2.Controllers
                              SocietyActivity = s.society_activity
                          }).ToList();
 
+            // Vi laver listen om til json, og returnere som string
             return JsonConvert.SerializeObject(query);
         }
     }
