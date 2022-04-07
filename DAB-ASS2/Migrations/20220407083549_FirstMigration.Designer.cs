@@ -4,6 +4,7 @@ using DAB_ASS2;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAB_ASS2.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220407083549_FirstMigration")]
+    partial class FirstMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -71,36 +73,6 @@ namespace DAB_ASS2.Migrations
                     b.ToTable("Chairmen");
                 });
 
-            modelBuilder.Entity("DAB_ASS2.Models.KeyResponsible", b =>
-                {
-                    b.Property<int>("key_responsible_ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("key_responsible_ID"), 1L, 1);
-
-                    b.Property<long>("key_responsible_CPR")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("key_responsible_address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("key_responsible_name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long>("key_responsible_phone")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("key_responsible_photo_ID_number")
-                        .HasColumnType("int");
-
-                    b.HasKey("key_responsible_ID");
-
-                    b.ToTable("keyResponsibles");
-                });
-
             modelBuilder.Entity("DAB_ASS2.Models.Location", b =>
                 {
                     b.Property<int>("location_ID")
@@ -123,28 +95,6 @@ namespace DAB_ASS2.Migrations
                     b.HasKey("location_ID");
 
                     b.ToTable("Locations");
-                });
-
-            modelBuilder.Entity("DAB_ASS2.Models.LocationAccess", b =>
-                {
-                    b.Property<int>("locationcodes_ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("locationcodes_ID"), 1L, 1);
-
-                    b.Property<int>("locationId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("location_key_pickup_address")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("locationcode")
-                        .HasColumnType("int");
-
-                    b.HasKey("locationcodes_ID");
-
-                    b.ToTable("LocationAccesses");
                 });
 
             modelBuilder.Entity("DAB_ASS2.Models.LocationProperty", b =>
@@ -211,9 +161,6 @@ namespace DAB_ASS2.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("society_ID"), 1L, 1);
-
-                    b.Property<int>("KeyResponsible_Id")
-                        .HasColumnType("int");
 
                     b.Property<int>("chairmanid")
                         .HasColumnType("int");

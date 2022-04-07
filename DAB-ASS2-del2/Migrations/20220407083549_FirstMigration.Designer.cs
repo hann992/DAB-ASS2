@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAB_ASS2.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20220405195906_newContext")]
-    partial class newContext
+    [Migration("20220407083549_FirstMigration")]
+    partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
