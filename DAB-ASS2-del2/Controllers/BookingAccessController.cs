@@ -16,6 +16,8 @@ namespace DAB_ASS2.Controllers
         [HttpGet("{keyResponsible}")]   // Vi tager en long int ind som key
         public string Get(long keyResponsible)
         {
+
+
             /*
             Given a key-responsible the municipalities would like to offer a 
             service, where the key-responsible can print a list of all future 
