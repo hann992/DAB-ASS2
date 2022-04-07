@@ -16,7 +16,7 @@ namespace DAB_ASS2.Controllers
         [HttpGet("{keyResponsible}")]   // Vi tager en long int ind som key
         public string Get(long keyResponsible)
         {
-            Console.WriteLine("ID: " + keyResponsible);
+            Console.WriteLine("ID: " + keyResponsible + " det er et tal");
 
             /*
             Given a key-responsible the municipalities would like to offer a 
